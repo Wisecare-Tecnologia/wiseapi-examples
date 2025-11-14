@@ -58,7 +58,7 @@ app.post('/create', async (request: FastifyRequest, reply: FastifyReply) => {
     joinPolicy: 'JOINPWD',
     joinPwd: env.ROOM_JOIN_PWD,
     openPwd: env.ROOM_OPEN_PWD,
-    lobbyEnabled: false
+    lobbyEnabled: true
   })
 
   await WiseAPI.room.open(room.short, {
