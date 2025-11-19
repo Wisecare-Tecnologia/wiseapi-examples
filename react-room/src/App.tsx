@@ -86,6 +86,7 @@ function App() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [moderator, setModerator] = useState(false)
+  const [enablePreJoin, setEnablePreJoin] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
@@ -136,6 +137,7 @@ function App() {
         width: 640,
         height: 480,
         moderator: moderator,
+        enablePreJoin: enablePreJoin,
         recording: false,
         onClose: () => { console.log('onClose') },
         onError: (event) => { console.log('onError', event) },
@@ -233,6 +235,13 @@ function App() {
               checked={moderator}
               onChange={e => setModerator(e.target.checked)}
             /> Moderador
+          </label>
+          <label style={styles.label}>
+            <input
+              type="checkbox"
+              checked={enablePreJoin}
+              onChange={e => setEnablePreJoin(e.target.checked)}
+            /> Pré-conferência
           </label>
           <button
             type="button"
