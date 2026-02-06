@@ -134,6 +134,7 @@ function App() {
         parentNode: document.getElementById('meet'),
         startWithVideoMuted: true,
         startWithAudioMuted: true,
+        startWithTileView: true,
         width: 640,
         height: 480,
         moderator: moderator,
